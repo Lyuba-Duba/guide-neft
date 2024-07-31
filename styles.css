@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Unbounded:wght@200..900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  font-size: clamp(14px, 2vw, 24px);
+  --accent-color: rgb(255, 194, 14);
+  --light-text: #fff;
+  --dark-text: #000;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  max-width: 2000px;
+  padding-inline: clamp(10px, 5vw, 40px);
+  margin-inline: auto;
+  overflow-x: hidden;
+  /* background-image: url("images/bg.jpg"); */
+  background-size: cover;
+  height: 5000px;
+}
+
+header {
+  margin: 1rem 0 3rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  gap: 1.5rem;
+}
+
+.logo {
+  width: 8rem;
+}
+
+.button,
+.button:visited {
+  display: block;
+  width: fit-content;
+  transition: all 0.3s ease-out;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--light-text);
+  text-decoration: none;
+  text-align: center;
+  border-radius: 2em;
+  background-color: var(--accent-color);
+  padding: .5em 1.5em;
+  /* border: .15rem solid rgb(255, 238, 0); */
+  border: .15rem solid rgba(255, 255, 255, 1);
+  /* box-shadow: inset -5px 5px 10px rgba(92, 60, 0, 0.1); */
+}
+
+.button:hover {
+  color: var(--light-text);
+  transform: scale(1.2);
+  filter: drop-shadow(-40px 50px 30px rgba(107, 73, 0, 0.2))
+          drop-shadow(-20px 20px 10px rgba(107, 73, 0, 0.1));
+}
+
+.button:active {
+  transform: scale(1);
+  filter: none;
+}
+
+.col-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(20px, 7vw, 40px);
+}
+
+.hero-text {
+  position: sticky;
+  top: 1rem;
+  width: 100%;
+  max-width: 50vw;
+  height: fit-content;
+}
+
+.cover {
+ position: relative;
+}
+
+.money {
+  position: absolute;
+  width: 300px;
+  /* margin-top: 6rem; */
+  right: 0;
+  transition: all 0.5s ease-out;
+}
+
+.hero-image {
+  position: relative;
+  margin-top: 5rem;
+  transition: all 0.5s ease-out;
+  /* right: -10vw; */
+  /* top: 0; */
+  /* left: 0; */
+  /* top: 0; */
+  width: 100%;
+  max-width: 50vw;
+
+  filter: drop-shadow(-40px 50px 30px rgba(0, 0, 0, 0.2))
+          drop-shadow(-20px 20px 10px rgba(0, 0, 0, 0.1)); 
+}
+
+/* .hero-image:hover {
+  transform: rotate(-20deg);
+} */
+
+.cover-image:hover .hero-image {
+  transform: rotate(-20deg);
+}
+
+.cover-image:hover .money {
+  transform: rotate(20deg);
+}
+
+h1 {
+  font-family: "Unbounded", sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+h2 {
+  margin-top: 8rem;
+  font-family: "Unbounded", sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1;
+  text-align: center;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.fullsuze-text {
+  width: 100%;
+  max-width: 1000px;
+  margin-inline: auto;
+  margin-top: 1rem;
+}
+
+.highlight {
+  background-color: var(--accent-color);
+}
+
+.hero-text p {
+  margin-top: 1rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-size: 72px;
+}
+
+.hero-text h3 {
+  font-weight: 400;
+}
+
+.args {
+  margin-top: 8rem;
+  align-items: center;
+}
+
+.args h2 {
+  margin-top: 0;
+  text-align: left;
+}
+
+.args p {
+  margin-bottom: 2.5rem;
+}
+
+.args-image {
+  width: 80%;
+}
+
+
+.team {
+  margin-top: 1.8rem;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  height: 600px;
+  flex: 1;
+  filter: grayscale(1);
+  transition: all 0.5s ease-out;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+
+.card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card .bio {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  transform: translate(0, 100%);
+  transition: all 0.5s ease-out;
+  padding: 1.5rem;
+  color: white;
+}
+
+.bio h3 {
+  font-size: 1rem;
+}
+
+.bio p {
+  font-size: .8rem;
+}
+
+.bio .description {
+  margin-top: 1rem;
+  transition: all 0.5s ease-out;
+  max-width: 600px;
+}
+
+.active {
+  flex: 7;
+  filter: grayscale(0);
+}
+
+.active .bio {
+  transform: translate(0, 0);
+}
+
+@media screen and (max-width: 850px) {
+  .col-2 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .hero-text {
+    max-width: 100%;
+  }
+  .hero-image {
+    max-width: 100%;
+  }
+
+  .team {
+    flex-direction: column;
+    height: 700px;
+  }
+  .card {
+    width: 100%;
+  }
+  .active {
+    flex: 3;
+  }
+}
+
+.video {
+  position: relative;
+  margin-inline: auto;
+  overflow: hidden;
+  width: 100%;
+  max-width: 70vw;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 2rem;
+  filter: drop-shadow(-40px 50px 30px rgba(0, 0, 0, 0.2))
+          drop-shadow(-20px 20px 10px rgba(0, 0, 0, 0.1)); 
+}
+
+.video video {
+  width: 100%;
+}
+
+.play-btn {
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 3;
+}
+
+.overlay {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(1);
+  z-index: 1;
+  transition: all 0.5s ease-out;
+}
+
+.poster {
+  width: 100%;
+  transform: scale(1.2); /* Потом убрать, когда будет нормальное превью */
+  object-fit: cover;
+  /* filter: blur(5px); */
+}
+
+.overlay:hover {
+  filter: grayscale(0);
+  cursor: pointer;
+}
+
+.hidden {
+  z-index: 0;
+  opacity: 0;
+}
+
+footer {
+  margin: 2rem 0;
+}

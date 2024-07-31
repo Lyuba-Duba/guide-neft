@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>oilbook</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="main.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <img src="/images/logo.svg" class="logo">
+    <div class="menu">
+      <a href="#" class="button">Понимание задачи</a>
+      <a href="#" class="button">Анонс</a>
+    </div>
+  </header>
+
+  <section class="col-2">
+    <div class="hero-text">
+      <h3 class="tag">Дипломный проект</h3>
+      <h1>Карьерный гид для новичков и&nbsp;&laquo;само&shy;званцев&raquo;</h1>
+      <p>
+        В&nbsp;любой сфере полно начинающих с&nbsp;маленькими зарплатами и&nbsp;скучными задачами. Как они становятся
+        обеспеченными, опытными и&nbsp;прокачанными специалистами, решающими действительно серьёзные отраслевые вопросы?
+        <span class="highlight">Как превратиться из&nbsp;нуба в&nbsp;профи? Наша команда попыталась найти ответ
+          в&nbsp;одной из&nbsp;самых
+          мощных и&nbsp;прибыльных отраслей России&nbsp;&mdash; нефтегазе.
+        </span>
+      </p>
+      <p>
+        Нефтянка постоянно борется с&nbsp;обстоятельствами, и&nbsp;люди, которые не&nbsp;развиваются, здесь
+        не&nbsp;задерживаются. У&nbsp;них можно научиться, как зарабатывать и&nbsp;тратить, как находить время
+        на&nbsp;саморазвитие и&nbsp;семью, как сочетать работу и&nbsp;отдых, одинаково бодро браться за&nbsp;неожиданные
+        вызовы и&nbsp;рутинные типичные задачи.
+      </p>
+    </div>
+    <div class="cover">
+      <div class="cover-image">
+        <img src="/images/money.jpg" class="money" />
+        <img src="images/book.png" class="hero-image" />
+      </div>
+    </div>
+  </section>
+
+  <section class="col-2 args">
+    <div style="text-align: center;">
+      <img src="/images/reader.jpg" class="args-image" />
+    </div>
+    <div>
+      <h2>Почему это купят?</h2>
+      <p class="fullsuze-text">
+        Потому что никто не&nbsp;знает, как стать успешным, пока не&nbsp;достигнет определённых высот. В&nbsp;России
+        принято ждать развития в&nbsp;карьере от&nbsp;начальника&nbsp;&mdash; а&nbsp;мы&nbsp;советуем взять процесс
+        в&nbsp;свои руки, опираясь на&nbsp;опыт нефтяников, которые уже чего-то добились.
+      </p>
+      <h2>Кто это купит?</h2>
+      <p class="fullsuze-text">
+        Тот, кто не&nbsp;уверен в&nbsp;себе как в&nbsp;профессионале. Это и&nbsp;студенты, и&nbsp;выпускники вузов,
+        не&nbsp;успевшие получить нормальную практику, и&nbsp;молодые специалисты, у&nbsp;которых нет нормальной
+        адаптации
+        на&nbsp;первом рабочем месте, и&nbsp;даже&nbsp;те, кто давно начал трудовой путь, но&nbsp;всё ещё
+        не&nbsp;понимает, как и&nbsp;куда развиваться.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Кто в&nbsp;проекте?</h2>
+    <div class="team">
+      <div class="card">
+        <img src="/images/manager.jpg" />
+        <div class="bio">
+          <h3>Александр Макетонский</h3>
+          <p class="profession">Иллюстратор, дизайнер</p>
+          <p class="description">
+            15 лет преподаёт в ВШЭ. Верстает книги, плакаты и сайты. Сверстал за
+            ночь 300-страничный буклет Газпрома.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/images/illustrator.jpg" />
+        <div class="bio">
+          <h3>Александр Макетонский</h3>
+          <p class="profession">Иллюстратор, дизайнер</p>
+          <p class="description">
+            15 лет преподаёт в ВШЭ. Верстает книги, плакаты и сайты. Сверстал за
+            ночь 300-страничный буклет Газпрома.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/images/editor.jpg" />
+        <div class="bio">
+          <h3>Александр Макетонский</h3>
+          <p class="profession">Иллюстратор, дизайнер</p>
+          <p class="description">
+            15 лет преподаёт в ВШЭ. Верстает книги, плакаты и сайты. Сверстал за
+            ночь 300-страничный буклет Газпрома.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <h3>hello</h3>
+  <div class="video">
+    <div class="overlay">
+      <img src="video/poster.webp" class="poster" />
+      <img src="images/play.svg" class="play-btn" />
+    </div>
+    <video preload="auto" volume="0.5" controls>
+      <!-- <source src="video/video1.mp4" type="video/mp4"> -->
+      <source src="video/video.webm" type="video/webm">
+      <p>Your browser does not support the video tag.</p>
+    </video>
+    <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/kX3nB4PpJko?si=ld4EZeexGds5np5H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+  </div>
+  <footer>
+    <p>© 2024, Люба Шаталова</p>
+  </footer>
+
+</body>
+
+</html>
+
+<!-- muted autoplay loop  -->
