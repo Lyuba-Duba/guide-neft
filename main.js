@@ -1,26 +1,26 @@
-const state = {
-  activeCard: null
-}
+// const state = {
+//   activeCard: null
+// }
 
-const cards = document.querySelectorAll(".card");
+// const cards = document.querySelectorAll(".card");
 
-const handleClick = (idx) => {
-  if (state.activeCard === idx) {
-    cards[idx].classList.remove("active");
-    state.activeCard = null;
-    return
-  }
-  else {
-    cards.forEach((card, i) => {
-      card.classList.toggle("active", i === idx);
-    })
-  }
-  state.activeCard = idx;
-}
+// const handleClick = (idx) => {
+//   if (state.activeCard === idx) {
+//     cards[idx].classList.remove("active");
+//     state.activeCard = null;
+//     return
+//   }
+//   else {
+//     cards.forEach((card, i) => {
+//       card.classList.toggle("active", i === idx);
+//     })
+//   }
+//   state.activeCard = idx;
+// }
 
-cards.forEach((card, idx) => {
-  card.addEventListener("click", () => handleClick(idx));
-});
+// cards.forEach((card, idx) => {
+//   card.addEventListener("click", () => handleClick(idx));
+// });
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -37,8 +37,8 @@ gsap.from(".video", {
   scale: 0.3,
   scrollTrigger: {
     trigger: ".team",
-    start: "bottom bottom",
-    end: "top top",
+    start: "top top",
+    end: "bottom top",
     scrub: true, 
   }
 });
@@ -65,9 +65,12 @@ video.addEventListener("seeking", (evt) => {
 });
 
 
-// Заресайзим денежку
+// Заресайзим
 const money = document.querySelector(".money");
 const cover = document.querySelector(".hero-image");
+
+// const manager = document.querySelector(".manager");
+// const managerNote = document.querySelector(".manager-note");
 
 const resizeMoney = () => {
   const coverWidth = cover.clientWidth;
@@ -77,10 +80,21 @@ const resizeMoney = () => {
   money.style.marginTop = `${coverMargin + coverWidth / 6}px`;
 }
 
+// const setManagerPos = () => {
+//   const topPos = manager.offsetTop - managerNote.offsetHeight + 70;
+//   const leftPost = manager.offsetLeft + manager.offsetWidth - managerNote.offsetWidth + 500;
+
+//   managerNote.style.top = `${topPos}px`;
+//   managerNote.style.left = `${leftPost}px`;
+// }
+
+
 window.addEventListener("load", () => {
   resizeMoney();
+  // setManagerPos();
 });
 
 window.addEventListener("resize", () => {
   resizeMoney();
+  // setManagerPos();
 })
