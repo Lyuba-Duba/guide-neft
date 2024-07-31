@@ -226,7 +226,7 @@ h3 {
 }
 
 .person-wrapper {
-  width: clamp(300px, 20vw, 400px);
+  width: clamp(300px, 25vw, 500px);
   position: relative;
 }
 
