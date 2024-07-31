@@ -3,6 +3,9 @@ const videoContainer = document.querySelector(".video");
 const video = videoContainer.querySelector("video");
 const overlay = videoContainer.querySelector(".overlay");
 
+// Устанавливаем уровень громкости на 20%, чтобы не пугать пользователя,
+// если у него выкручены громко колонки.
+video.volume = 0.2;
 
 overlay.addEventListener("click", (evt) => {
   evt.preventDefault();
