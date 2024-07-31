@@ -24,7 +24,6 @@ body {
   padding-inline: clamp(10px, 5vw, 40px);
   margin-inline: auto;
   overflow-x: hidden;
-  /* background-image: url("images/bg.jpg"); */
   background-size: cover;
 }
 
@@ -62,9 +61,7 @@ header {
   border-radius: 2em;
   background-color: var(--accent-color);
   padding: .5em 1.5em;
-  /* border: .15rem solid rgb(255, 238, 0); */
   border: .15rem solid rgba(255, 255, 255, 1);
-  /* box-shadow: inset -5px 5px 10px rgba(92, 60, 0, 0.1); */
 }
 
 .button:hover {
@@ -95,13 +92,11 @@ header {
 
 .cover {
  position: relative;
- /* height: fit-content; */
 }
 
 .money {
   position: absolute;
   width: 300px;
-  /* margin-top: 6rem; */
   right: 0;
   transition: all 0.5s ease-out;
 }
@@ -110,20 +105,12 @@ header {
   position: relative;
   margin-top: 5rem;
   transition: all 0.5s ease-out;
-  /* right: -10vw; */
-  /* top: 0; */
-  /* left: 0; */
-  /* top: 0; */
   width: 100%;
   max-width: 50vw;
 
   filter: drop-shadow(-40px 50px 30px rgba(0, 0, 0, 0.2))
           drop-shadow(-20px 20px 10px rgba(0, 0, 0, 0.1)); 
 }
-
-/* .hero-image:hover {
-  transform: rotate(-20deg);
-} */
 
 .cover-image {
   position: sticky;
@@ -204,6 +191,10 @@ h3 {
   width: 80%;
 }
 
+.team, .team-persons {
+  display: grid;
+  gap: 1rem;
+}
 
 .team {
   margin-top: 5rem;
@@ -235,7 +226,7 @@ h3 {
 }
 
 .person-wrapper {
-  width: clamp(300px, 20vw, 600px);
+  width: clamp(300px, 20vw, 400px);
   position: relative;
 }
 
@@ -285,6 +276,10 @@ h3 {
   font-size: .8rem;
 }
 
+.job {
+  display: none;
+}
+
 .bio .description {
   margin-top: 1rem;
   transition: all 0.5s ease-out;
@@ -294,7 +289,6 @@ h3 {
 .manager-note {
   position: absolute;
   width: 20vw;
-  /* transform: scale(0.5); */
   right: -23vw;
   top:10%;
   z-index: 5;
@@ -303,19 +297,16 @@ h3 {
 .editor-note {
   position: absolute;
   width: 11vw;
-  /* transform: scale(0.5); */
-  /* right: -92%; */
   top: -34%;
-  /* left: -5vw; */
+  z-index: 5;
 }
 
 .illustrator-note {
   position: absolute;
   width: 20vw;
-  /* transform: scale(0.5); */
-  /* right: -92%; */
   bottom: -30%;
   left: -20vw;
+  z-index: 5;
 }
 
 .active {
@@ -325,6 +316,34 @@ h3 {
 
 .active .bio {
   transform: translate(0, 0);
+}
+
+@media screen and (max-width: 850px) {
+  .team-persons {
+    grid-template-columns: 1fr;
+  }
+  .job {
+    display: block;
+  }
+  .manager-note {
+    display: none;
+  }
+  .editor-note {
+    display: none;
+  }
+  .illustrator-note {
+    display: none;
+  }
+  .person-wrapper {
+    width: clamp(300px, 100%, 400px);
+  }
+  .card {
+    transform: scale(1);
+  }
+  .card:hover {
+    transform: scale(1);
+    filter: none;
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -339,15 +358,8 @@ h3 {
     max-width: 100%;
   }
 
-  .team {
-    flex-direction: column;
-    height: 700px;
-  }
   .card {
     width: 100%;
-  }
-  .active {
-    flex: 3;
   }
 }
 
@@ -360,13 +372,18 @@ h3 {
   margin-inline: auto;
   margin-top: 3rem;
   overflow: hidden;
-  width: 100%;
-  max-width: 70vw;
+  width: 60vw;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 2rem;
   filter: drop-shadow(-40px 50px 30px rgba(0, 0, 0, 0.2))
           drop-shadow(-20px 20px 10px rgba(0, 0, 0, 0.1)); 
+}
+
+@media screen and (max-width: 1200px) {
+  .video {
+    width: 100%;
+  }
 }
 
 .video video {
@@ -398,7 +415,6 @@ h3 {
   width: 100%;
   transform: scale(1.2); /* Потом убрать, когда будет нормальное превью */
   object-fit: cover;
-  /* filter: blur(5px); */
 }
 
 .overlay:hover {
