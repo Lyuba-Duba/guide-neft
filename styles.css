@@ -48,9 +48,16 @@ header {
   width: 8rem;
 }
 
+@media screen and (max-width: 450px) {
+  .logo {
+    width: 6rem;
+  }
+}
+
 .button,
 .button:visited {
-  display: block;
+  display: grid;
+  align-items: center;
   width: fit-content;
   transition: all 0.3s ease-out;
   font-size: 1rem;
@@ -130,6 +137,12 @@ h1 {
   font-size: 4rem;
   font-weight: 900;
   line-height: 1;
+}
+
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 3rem;
+  }
 }
 
 h2 {
@@ -452,4 +465,19 @@ h3 {
 footer {
   margin: 2rem 0;
   margin-top: 8rem;
+}
+
+@media screen and (max-width: 850px) {
+  h2 {
+    margin-top: 6rem;
+  }
+  .video-section {
+    margin-top: 6rem;
+  }
+  .team {
+    margin-top: 2rem;
+  }
+  .video {
+    margin-top: 2rem;
+  }
 }
